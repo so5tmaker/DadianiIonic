@@ -43,7 +43,7 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
     DishProvider,
     LeaderProvider,
     PromotionProvider,
-    ProcessHttpmsgProvider,
+    ProcessHttpmsgProvider
   ]
 })
 export class AppModule {}
