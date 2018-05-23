@@ -26,7 +26,7 @@ export class MyApp {
       { title: 'Главная', icon: 'home', component: HomePage },
       { title: 'О нас', icon: 'information-circle', component: AboutPage },
       { title: 'Меню', icon: 'list-box', component: MenuPage },
-      { title: 'Контакты', icon: 'contact', component: ContactPage },
+      { title: 'Контакты', icon: 'contact', component: ContactPage }
     ];
 
   }
