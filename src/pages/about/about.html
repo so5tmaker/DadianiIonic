@@ -9,7 +9,6 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
   <ion-card>
@@ -29,5 +28,30 @@
     </ion-card-content>
 
   </ion-card>
+
+  <ion-card *ngIf="leaders">
+    <ion-list-header>
+      <h2 class="list-title">Лидеры производства</h2>
+    </ion-list-header>
+    <ion-list *ngFor="let leader of leaders" no-lines>
+      <ion-item text-wrap>
+        <ion-avatar item-start>
+          <img src="{{BaseURL + leader.image}}" alt="{{leader.name}}" />
+        </ion-avatar>
+        <h2>{{leader.name}}</h2>
+        <p>{{leader.designation}}</p>
+        <p>{{leader.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div [hidden]="leaders || errMess">
+    <ion-spinner></ion-spinner>
+    <h4>Загружается . . . Пожалуйста, подождите</h4>
+  </div>
+  <div *ngIf="errMess">
+    <h2>Ошибка</h2>
+    <h4>{{errMess}}</h4>
+  </div>
 
 </ion-content>
