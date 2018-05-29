@@ -22,7 +22,7 @@ export class DishdetailPage {
     private favoriteservice: FavoriteProvider
   ) {
     this.dish = navParams.get('dish');
-    // this.favorite = favoriteservice.isFavorite(this.dish.id);
+    this.favorite = favoriteservice.isFavorite(this.dish.id);
     this.numcomments = this.dish.comments.length;
     let total = 0;
     this.dish.comments.forEach(comment => total += comment.rating);
@@ -35,7 +35,7 @@ export class DishdetailPage {
 
   addToFavorites() {
     console.log('Adding to Favorites', this.dish.id);
-    //this.favorite = this.favoriteservice.addFavorite(this.dish.id);
+    this.favorite = this.favoriteservice.addFavorite(this.dish.id);
   }
 
 }
