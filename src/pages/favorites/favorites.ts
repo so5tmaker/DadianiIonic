@@ -37,7 +37,7 @@ export class FavoritesPage implements OnInit {
     item.close();
 
     this.toastCtrl.create({
-      message: 'Dish ' + id + ' deleted successfully', 
+      message: 'Блюдо ' + id + ' успешно удалено', 
       duration: 3000}).present();
     item.close();
   }
