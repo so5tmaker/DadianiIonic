@@ -7,6 +7,9 @@ import { Dish } from '../../shared/dish';
 import { Comment } from '../../shared/comment';
 
 import { FavoriteProvider } from '../../providers/favorite/favorite';
+import { DishProvider } from '../../providers/dish/dish';
+
+import { CommentPage } from '../comment/comment';
 
 @IonicPage()
 @Component({
@@ -15,14 +18,18 @@ import { FavoriteProvider } from '../../providers/favorite/favorite';
 })
 export class DishdetailPage {
   dish: Dish;
+  dishcopy = null;
   errMess: string;
   avgstars: string;
   numcomments: number;
   favorite: boolean;
+  comment: Comment;
+  date = new Date();
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public actionSheetCtrl: ActionSheetController,
     private favoriteservice: FavoriteProvider,
+    private dishservice: DishProvider,
     private toastCtrl: ToastController,
     public modalCtrl: ModalController,
     @Inject('BaseURL') private BaseURL
