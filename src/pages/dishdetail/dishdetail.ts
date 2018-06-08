@@ -69,7 +69,7 @@ export class DishdetailPage {
         }, {
           text: 'Добавить комментарий',
           handler: () => {
-            //this.openComment();
+            this.openComment();
             console.log('Add Comment clicked');
           }
         }, {
@@ -82,6 +82,26 @@ export class DishdetailPage {
       ]
     });
     actionSheet.present();
+  }
+
+
+  openComment() {
+    let modal = this.modalCtrl.create(CommentPage);
+    modal.onDidDismiss(data => {
+      this.comment = data;
+      console.log(this.comment);
+      this.dish.comments.push(this.comment);
+      this.dishservice.submitDish(this.dish, this.dish.id)
+        .subscribe(
+          (data: Dish) => { this.dish = data; },
+          errMess => console.log(errMess)
+        );
+    });
+    modal.present();
+  }
+
+  onDidDismiss() {
+
   }
 
 }
