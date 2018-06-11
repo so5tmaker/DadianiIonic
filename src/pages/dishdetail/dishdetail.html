@@ -50,7 +50,7 @@
     </ion-list-header>
     <ion-item *ngFor="let comment of dish.comments" text-wrap>
       <h4> {{comment.comment}} </h4>
-      <p> {{comment.rating}} Stars</p>
+      <p> Звезд -- {{comment.rating}} </p>
       <p>
         <span> -- {{comment.author}} {{comment.date | date }} </span>
       </p>
