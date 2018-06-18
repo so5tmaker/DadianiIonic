@@ -39,7 +39,7 @@ export class FavoritesPage implements OnInit {
 
     let alert = this.alertCtrl.create({
       title: 'Подтвердите удаление',
-      message: 'Вы уверены, что хотите удалить блюдо? ' + id,
+      message: 'Вы уверены, что хотите удалить блюдо ' + id + ' из избранных?',
       buttons: [
         {
           text: 'Отменить',
