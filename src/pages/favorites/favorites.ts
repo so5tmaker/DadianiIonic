@@ -34,12 +34,12 @@ export class FavoritesPage implements OnInit {
     console.log('ionViewDidLoad FavoritesPage');
   }
 
-  deleteFavorite(item: ItemSliding, id: number) {
+  deleteFavorite(item: ItemSliding, id: number, name:string) {
     console.log('удаление', id);
 
     let alert = this.alertCtrl.create({
       title: 'Подтвердите удаление',
-      message: 'Вы уверены, что хотите удалить блюдо ' + id + ' из избранных?',
+      message: 'Вы уверены, что хотите удалить блюдо «' + name + '» из избранных?',
       buttons: [
         {
           text: 'Отменить',
@@ -55,7 +55,7 @@ export class FavoritesPage implements OnInit {
               content: 'Удаление . . .'
             });
             let toast = this.toastCtrl.create({
-              message: 'Блюдо ' + id + ' успешно удалено',
+              message: 'Блюдо «' + name + '» успешно удалено',
               duration: 3000
             });
             loading.present();
