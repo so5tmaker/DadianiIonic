@@ -35,11 +35,12 @@ export class DishdetailPage {
     @Inject('BaseURL') private BaseURL
   ) {
     this.dish = navParams.get('dish');
-    /* this.favorite = favoriteservice.isFavorite(this.dish.id);
+    this.favorite = favoriteservice.isFavorite(this.dish.id);
+
     this.numcomments = this.dish.comments.length;
     let total = 0;
     this.dish.comments.forEach(comment => total += comment.rating);
-    this.avgstars = (total / this.numcomments).toFixed(2); */
+    this.avgstars = (total / this.numcomments).toFixed(2);
   }
 
   ionViewDidLoad() {
