@@ -15,7 +15,19 @@ export class FavoriteProvider {
     private dishservice: DishProvider,
     private storage: Storage) {
     console.log('Hello FavoriteProvider Provider');
-    this.favorites = [];
+    this.getFavoritesFromStorage();
+  }
+
+  getFavoritesFromStorage() {
+    this.storage.get('favorites').then(favorites => {
+      if (favorites) {
+        console.log(favorites);
+        this.favorites = favorites;
+      }
+      else {
+        this.favorites = [];
+      }
+    });
   }
 
   addFavorite(id: number): boolean {
