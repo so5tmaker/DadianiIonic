@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Dish } from '../../shared/dish';
 import { Observable } from 'rxjs/Observable';
 import { DishProvider } from '../dish/dish';
+import { Storage } from '@ionic/storage';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class FavoriteProvider {
@@ -10,7 +12,8 @@ export class FavoriteProvider {
   favorites: Array<any>;
 
   constructor(public http: HttpModule,
-    private dishservice: DishProvider) {
+    private dishservice: DishProvider,
+    private storage: Storage) {
     console.log('Hello FavoriteProvider Provider');
     this.favorites = [];
   }
