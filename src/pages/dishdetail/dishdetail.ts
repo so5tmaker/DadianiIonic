@@ -91,7 +91,8 @@ export class DishdetailPage {
     modal.onDidDismiss(data => {
       this.comment = data;
       console.log(this.comment);
-      this.dish.comments.push(this.comment);
+      if (this.comment)
+        this.dish.comments.push(this.comment);
       this.dishservice.submitDish(this.dish, this.dish.id)
         .subscribe(
           (data: Dish) => { this.dish = data; },
