@@ -27,6 +27,8 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
 import { baseURL } from '../shared/baseurl';
 import { FavoriteProvider } from '../providers/favorite/favorite';
 
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 @NgModule({
   declarations: [
     MyApp,
