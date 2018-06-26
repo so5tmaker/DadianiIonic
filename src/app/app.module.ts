@@ -70,7 +70,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     PromotionProvider,
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
-    FavoriteProvider
+    FavoriteProvider,
+    LocalNotifications
   ]
 })
 export class AppModule {}
