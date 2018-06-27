@@ -38,6 +38,12 @@ export class FavoriteProvider {
       this.favorites.push(id);
     this.storage.set('favorites', this.favorites);
     return true;
+
+    // Schedule a single notification
+    this.localNotifications.schedule({
+      id: id,
+      text: 'Dish ' + id + ' added as a favorite successfully'
+    });
   }
 
   isFavorite(id: number): boolean {
