@@ -15,7 +15,8 @@ export class FavoriteProvider {
 
   constructor(public http: HttpModule,
     private dishservice: DishProvider,
-    private storage: Storage) {
+    private storage: Storage,
+    private localNotifications: LocalNotifications) {
     console.log('Hello FavoriteProvider Provider');
     this.getFavoritesFromStorage();
   }
