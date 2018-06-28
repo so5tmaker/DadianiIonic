@@ -72,7 +72,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
     FavoriteProvider,
-    LocalNotifications
+    LocalNotifications,
+    EmailComposer
   ]
 })
 export class AppModule {}
