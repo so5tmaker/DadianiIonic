@@ -34,16 +34,17 @@ export class FavoriteProvider {
   }
 
   addFavorite(id: number): boolean {
-    if (!this.isFavorite(id))
+    if (!this.isFavorite(id)) {
       this.favorites.push(id);
-    this.storage.set('favorites', this.favorites);
-    return true;
+      this.storage.set('favorites', this.favorites);
 
-    // Schedule a single notification
-    this.localNotifications.schedule({
-      id: id,
-      text: 'Dish ' + id + ' added as a favorite successfully'
-    });
+      // Schedule a single notification
+      this.localNotifications.schedule({
+        id: id,
+        text: 'Dish ' + id + ' added as a favorite successfully'
+      });
+    }
+    return true;
   }
 
   isFavorite(id: number): boolean {
