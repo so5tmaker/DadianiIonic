@@ -34,7 +34,8 @@ export class DishdetailPage {
     private dishservice: DishProvider,
     private toastCtrl: ToastController,
     public modalCtrl: ModalController,
-    @Inject('BaseURL') private BaseURL
+    @Inject('BaseURL') private BaseURL,
+    private socialSharing: SocialSharing
   ) {
     this.dish = navParams.get('dish');
     this.favorite = favoriteservice.isFavorite(this.dish.id);
@@ -69,7 +70,8 @@ export class DishdetailPage {
             this.addToFavorites();
             console.log('Add To Favorites clicked');
           }
-        }, {
+        },
+        {
           text: 'Добавить комментарий',
           handler: () => {
             this.openComment();
@@ -81,7 +83,23 @@ export class DishdetailPage {
           handler: () => {
             console.log('Cancel clicked');
           }
-        }
+        },
+        {
+          text: 'Поделиться через Facebook',
+          handler: () => {
+            this.socialSharing.shareViaFacebook(this.dish.name + ' -- ' + this.dish.description, this.BaseURL + this.dish.image, '')
+              .then(() => console.log('Posted successfully to Facebook'))
+              .catch(() => console.log('Failed to post to Facebook'));
+          }
+        },
+        {
+          text: 'Поделиться через Twitter',
+          handler: () => {
+            this.socialSharing.shareViaTwitter(this.dish.name + ' -- ' + this.dish.description, this.BaseURL + this.dish.image, '')
+              .then(() => console.log('Posted successfully to Twitter'))
+              .catch(() => console.log('Failed to post to Twitter'));
+          }
+        },
       ]
     });
     actionSheet.present();
