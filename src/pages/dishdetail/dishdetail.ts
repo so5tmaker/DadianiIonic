@@ -11,6 +11,8 @@ import { DishProvider } from '../../providers/dish/dish';
 
 import { CommentPage } from '../comment/comment';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 @IonicPage()
 @Component({
   selector: 'page-dishdetail',
