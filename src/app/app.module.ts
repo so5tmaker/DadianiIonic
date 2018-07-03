@@ -74,7 +74,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     { provide: 'BaseURL', useValue: baseURL },
     FavoriteProvider,
     LocalNotifications,
-    EmailComposer
+    EmailComposer,
+    SocialSharing
   ]
 })
 export class AppModule {}
