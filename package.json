@@ -31,6 +31,7 @@
     "cordova-android": "^7.1.0",
     "cordova-ios": "4.5.4",
     "cordova-plugin-app-event": "^1.2.1",
+    "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-email": "^1.2.7",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
@@ -61,7 +62,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "de.appplant.cordova.plugin.local-notification": {},
       "cordova-plugin-email": {},
-      "cordova-plugin-x-socialsharing": {}
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-camera": {}
     },
     "platforms": [
       "android",
