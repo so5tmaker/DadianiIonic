@@ -76,7 +76,8 @@ import { Camera } from '@ionic-native/camera';
     FavoriteProvider,
     LocalNotifications,
     EmailComposer,
-    SocialSharing
+    SocialSharing,
+    Camera
   ]
 })
 export class AppModule {}
