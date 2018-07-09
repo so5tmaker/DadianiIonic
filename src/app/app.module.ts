@@ -45,7 +45,8 @@ import { Camera } from '@ionic-native/camera';
     FavoritesPage,
     ReservationPage,
     CommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
