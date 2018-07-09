@@ -65,7 +65,8 @@ import { Camera } from '@ionic-native/camera';
     FavoritesPage,
     ReservationPage,
     CommentPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
