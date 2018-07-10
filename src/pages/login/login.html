@@ -29,4 +29,6 @@
     </ion-item>
     <button ion-button type="submit" [disabled]="!loginForm.valid">Войти</button>
   </form>
+  <p>У вас нет учетной записи? Тогда </p>
+  <button ion-button clear (click)="openRegister()">Зарегистрируйтесь</button>
 </ion-content>
