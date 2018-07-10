@@ -4,6 +4,8 @@ import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 import { User } from '../../shared/user';
 
+import { RegisterPage } from '../register/register';
+
 @IonicPage()
 @Component({
   selector: 'page-login',
