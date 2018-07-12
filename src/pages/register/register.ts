@@ -57,7 +57,12 @@ export class RegisterPage {
     }, (err) => {
       console.log('Error obtaining picture')
     });
+
   }
 
+  onSubmit() {
+    console.log(this.registerForm.value);
+    this.dismiss();
+  }
 
 }
