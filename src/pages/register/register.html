@@ -26,6 +26,18 @@
     </ion-grid>
   </ion-card>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label floating>Имя</ion-label>
+      <ion-input type="text" formControlName="firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Фамилия</ion-label>
+      <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Логин</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
     <button ion-button type="submit" [disabled]="!registerForm.valid">Register</button>
   </form>
 </ion-content>
