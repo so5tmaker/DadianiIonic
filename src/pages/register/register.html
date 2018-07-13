@@ -6,7 +6,7 @@
         <span ion-text color="primary" showWhen="ios">Отменить</span>
         <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
       </button>
-    </ion-buttons>    
+    </ion-buttons>
     <ion-title>Зарегистрироваться</ion-title>
   </ion-toolbar>
 
@@ -25,4 +25,7 @@
       </ion-row>
     </ion-grid>
   </ion-card>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <button ion-button type="submit" [disabled]="!registerForm.valid">Register</button>
+  </form>
 </ion-content>
