@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { EmailComposer } from '@ionic-native/email-composer';
+// 1
 
 @IonicPage()
 @Component({
@@ -9,10 +10,11 @@ import { EmailComposer } from '@ionic-native/email-composer';
   templateUrl: 'contact.html',
 })
 export class ContactPage {
-
+  
+  //2
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private emailComposer: EmailComposer) {
-  }
+  }//
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
@@ -30,5 +32,7 @@ export class ContactPage {
     // Send a text message using default options
     this.emailComposer.open(email);
   }
+
+// 3
 
 }
