@@ -54,7 +54,7 @@ export class DishdetailPage {
     console.log('Adding to Favorites', this.dish.id);
     this.favorite = this.favoriteservice.addFavorite(this.dish.id);
     this.toastCtrl.create({
-      message: 'Блюдо ' + this.dish.id + ' успешно добавлено в список избранных ',
+      message: 'Блюдо «' + this.dish.name + '» успешно добавлено в список избранных ',
       position: 'middle',
       duration: 3000
     }).present();
