@@ -10,7 +10,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
   templateUrl: 'contact.html',
 })
 export class ContactPage {
-  
+
   //2
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private emailComposer: EmailComposer) {
@@ -22,17 +22,18 @@ export class ContactPage {
 
   sendEmail() {
 
+    //3
     let email = {
       to: 'confusion@food.net',
       subject: '[ConFusion]: Query',
       body: 'Dear Sir/Madam:',
       isHtml: true
-    };
+    };//
 
     // Send a text message using default options
     this.emailComposer.open(email);
   }
 
-// 3
+//4
 
 }
