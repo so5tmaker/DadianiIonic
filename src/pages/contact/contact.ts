@@ -33,6 +33,10 @@ export class ContactPage {
     this.emailComposer.open(email);
   }
 
-  //4
+  callRestaurant() {
+    this.callNumber.callNumber("+77714871313", true)
+      .then(() => console.log('Launched dialer!'))
+      .catch(() => console.log('Error launching dialer'));
+  }
 
 }
