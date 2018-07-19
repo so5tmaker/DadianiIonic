@@ -22,13 +22,12 @@ export class ContactPage {
 
   sendEmail() {
 
-    //3
     let email = {
-      to: 'confusion@food.net',
-      subject: '[ConFusion]: Query',
-      body: 'Dear Sir/Madam:',
+      to: 'dadiani.almaty@gmail.com',
+      subject: '[Дадиани]: Query',
+      body: 'Уважаемый посетитель!',
       isHtml: true
-    };//
+    };
 
     // Send a text message using default options
     this.emailComposer.open(email);
