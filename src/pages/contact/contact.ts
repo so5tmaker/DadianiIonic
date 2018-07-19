@@ -11,10 +11,10 @@ import { CallNumber } from '@ionic-native/call-number';
 })
 export class ContactPage {
 
-  //2
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private emailComposer: EmailComposer) {
-  }//
+    private emailComposer: EmailComposer,
+    private callNumber: CallNumber) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
@@ -34,6 +34,6 @@ export class ContactPage {
     this.emailComposer.open(email);
   }
 
-//4
+  //4
 
 }
