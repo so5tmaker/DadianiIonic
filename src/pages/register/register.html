@@ -22,7 +22,9 @@
         <ion-col>
           <button ion-button small (click)="getPicture()">Сделать снимок</button>
         </ion-col>
-        <!-- 2 -->
+        <ion-col>
+          <button ion-button small (click)="getFromLibrary()">Выбрать из Библиотеки</button>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
@@ -40,8 +42,8 @@
       <ion-input type="text" formControlName="username"></ion-input>
     </ion-item>
     <ion-item>
-    <ion-label floating>Пароль</ion-label>
-    <ion-input type="password" formControlName="password"></ion-input>
+      <ion-label floating>Пароль</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Телефон</ion-label>
